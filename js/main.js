@@ -8,6 +8,16 @@
         $(this).remove();
       });
     }
+    var jqxhr = $.getJSON("https://shubhamondal.github.io/DemoWork1/DynamicCorossolLoad.json", function () {
+      if(jqxhr.responseJSON.length>0)
+      {
+        $(".carousel-item").each(function (index) {
+          $(this).css("background-image", "url(" + jqxhr.responseJSON[index].url + ")"); 
+          $('h2').text(jqxhr.responseJSON[index].h1);
+          $('p').text(jqxhr.responseJSON[index].p);
+        });
+      }
+      })
   });
 
   // Back to top button
