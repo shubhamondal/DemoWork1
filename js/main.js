@@ -13,8 +13,8 @@
       {
         $(".carousel-item").each(function (index) {
           $(this).css("background-image", "url(" + jqxhr.responseJSON[index].url + ")"); 
-          $('h2').text(jqxhr.responseJSON[index].h1);
-          $('p').text(jqxhr.responseJSON[index].p);
+          $('#carousel_h2_'+index).text(jqxhr.responseJSON[index].h1);
+          $('#carousel_p_'+index).text(jqxhr.responseJSON[index].p);
         });
       }
       })
