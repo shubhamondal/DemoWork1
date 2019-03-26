@@ -8,6 +8,7 @@
         $(this).remove();
       });
     }
+    //Dynamic carousel load
     var jqxhr = $.getJSON("https://shubhamondal.github.io/DemoWork1/DynamicCorossolLoad.json", function () {
       if(jqxhr.responseJSON.length>0)
       {
